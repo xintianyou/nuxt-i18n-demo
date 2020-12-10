@@ -3,5 +3,7 @@
   "date": "{date}",
   "privacy": "隐私页面",
   "thisIs": "这是 {page} 页面",
-  "goBack": "返回上一页"
+  "goBack": "返回上一页",
+  "about": "关于",
+  "detail": "详细"
 }

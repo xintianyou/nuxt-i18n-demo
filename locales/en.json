@@ -3,5 +3,7 @@
   "date": "{date}",
   "privacy": "View privacy policy",
   "thisIs": "This is {page} page ",
-  "goBack": "Go back"
+  "goBack": "Go back",
+  "about": "about",
+  "detail": "detail"
 }

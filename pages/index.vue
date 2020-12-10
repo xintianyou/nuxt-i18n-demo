@@ -5,7 +5,25 @@
       <h1 class="title">
         ssr-demo
       </h1>
+      <video width="320" height="240" loop autoplay="true">
+        <source src="../static/first.mp4" type="video/mp4">
+      </video>
       <p>{{ $t('welcome') }}</p> 
+      <p>
+        <nuxt-link to="/about/">
+          {{ $t('about') }}
+        </nuxt-link>
+      </p>
+      <p>
+        <nuxt-link to="/detail/1">
+          {{ $t('detail') }}1
+        </nuxt-link>
+      </p>
+      <p>
+        <nuxt-link to="/detail/2">
+          {{ $t('detail') }}2
+        </nuxt-link>
+      </p>
     </div>
   </div>
 </template>
