@@ -1,0 +1,7 @@
+{
+  "welcome": "Hello, this is in English!",
+  "date": "{date}",
+  "privacy": "View privacy policy",
+  "thisIs": "This is {page} page ",
+  "goBack": "Go back"
+}
