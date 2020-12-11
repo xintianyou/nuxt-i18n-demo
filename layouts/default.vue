@@ -5,12 +5,12 @@
       <ul>
         <li>
           <nuxt-link :to="navbarRoute.index">
-            <a :class="{'active': routerPath === '/'}">{{ $t('home') }}</a>
+            <a :class="{'active': routerPath === '/' || routerPath === '/en'}">{{ $t('home') }}</a>
           </nuxt-link>
         </li>
         <li>
           <nuxt-link :to="navbarRoute.about">
-            <a :class="{'active': routerPath === '/about'}">{{ $t('about') }}</a>
+            <a :class="{'active': routerPath === '/about' || routerPath === '/en/about'}">{{ $t('about') }}</a>
           </nuxt-link>
         </li>
         <li>被投企业</li>
