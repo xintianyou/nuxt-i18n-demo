@@ -1,30 +1,11 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        ssr-demo
-      </h1>
-      <video width="320" height="240" loop autoplay="true">
+  <div class="home-container">
+    <div class="video">
+      <video loop autoplay="true" muted style="width= 100%; height=100%; object-fit: fill">
         <source src="../static/first.mp4" type="video/mp4">
       </video>
-      <p>{{ $t('welcome') }}</p> 
-      <p>
-        <nuxt-link to="/about/">
-          {{ $t('about') }}
-        </nuxt-link>
-      </p>
-      <p>
-        <nuxt-link to="/detail/1">
-          {{ $t('detail') }}1
-        </nuxt-link>
-      </p>
-      <p>
-        <nuxt-link to="/detail/2">
-          {{ $t('detail') }}2
-        </nuxt-link>
-      </p>
     </div>
+    <div class="banner"></div>
   </div>
 </template>
 
@@ -32,43 +13,28 @@
 export default {}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+<style lang="scss" scoped>
+.home-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  .video {
+    width: 100%;
+    height: 100%;
+    video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .banner {
+    width: 100%;
+    height: 100vh;
+  }
 }
 </style>
