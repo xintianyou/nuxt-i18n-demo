@@ -4,12 +4,12 @@
       <div class="logo">LOGO</div>
       <ul>
         <li>
-          <nuxt-link :to="locale === 'en' ? '/en' : '/'">
+          <nuxt-link :to="navbarRoute.index">
             <a :class="{'active': routerPath === '/'}">{{ $t('home') }}</a>
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link :to="locale === 'en' ? '/en/about' : '/about'">
+          <nuxt-link :to="navbarRoute.about">
             <a :class="{'active': routerPath === '/about'}">{{ $t('about') }}</a>
           </nuxt-link>
         </li>
@@ -34,7 +34,11 @@
     },
     data() {
       return {
-        routerPath: ''
+        routerPath: '',
+        navbarRoute: {
+          index: '/',
+          about: '/about'
+        }
       }
     },
     computed: {
@@ -47,10 +51,13 @@
         const code = this.locale === 'zh' ? 'en' : 'zh'
         this.$i18n.setLocale(code)
       },
-      // 获取当前路由
+      // 获取当前路由，根据当前语言设置navbar的路由
       getCurrentRouter() {
-        console.log(this.$nuxt.$route.path)
         this.routerPath = $nuxt.$route.path
+        this.navbarRoute = {
+          index: this.locale === 'zh' ? '/' : '/en',
+          about: this.locale === 'zh' ? '/about' : '/en/about',
+        }
       }
     },
     mounted() {
