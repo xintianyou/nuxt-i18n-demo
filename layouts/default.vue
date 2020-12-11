@@ -71,7 +71,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="less">
 html {
   font-family:
     'Source Sans Pro',
